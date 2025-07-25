@@ -24,6 +24,7 @@ models/*
 *.log
 *.out
 *.csv
+*.pkl
 
 # OS-specific files
 .DS_Store
