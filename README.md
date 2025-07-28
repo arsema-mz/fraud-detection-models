@@ -53,3 +53,4 @@ Two machine learning models were trained and evaluated for fraud detection:
 ### Summary of Findings
 - Both models achieved a similar ROC AUC of 0.84, indicating good performance in class differentiation.
 - Random Forest outperformed Logistic Regression in precision and in handling false classifications.
+
