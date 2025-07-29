@@ -54,3 +54,29 @@ Two machine learning models were trained and evaluated for fraud detection:
 - Both models achieved a similar ROC AUC of 0.84, indicating good performance in class differentiation.
 - Random Forest outperformed Logistic Regression in precision and in handling false classifications.
 
+### 🧠 Model Explainability with SHAP
+
+In this task, I focused on understanding the internal decision-making process of the trained fraud detection model using **SHAP (SHapley Additive exPlanations)**, a state-of-the-art explainability method grounded in game theory.
+
+#### 🛠️ Steps Performed
+1. **Model Selection**  
+   Used the previously trained **Random Forest Classifier**, which showed strong performance in Task 2.
+
+2. **SHAP Explainer Setup**  
+   Initialized a `TreeExplainer` tailored for tree-based models like Random Forests.
+
+3. **Data Sampling**  
+   Extracted a small subset of the test data (e.g., 50 rows) to reduce computation time, converting sparse inputs to dense format if necessary.
+
+4. **SHAP Value Computation**  
+   Computed SHAP values on the sample to quantify each feature’s contribution to the model’s fraud prediction output.
+
+5. **Visualization**  
+   Generated:
+   - **SHAP Summary Plot** (global feature importance)
+   - **SHAP Force Plot** (local explanation for individual predictions)
+
+#### 📈 Key Outcomes
+- Identified top predictors of fraudulent behavior (e.g., `country risk`, `transaction amount`, or `IP region`)
+- Gained insights into how the model distinguishes between fraudulent and non-fraudulent transactions
+- Increased trust in the model by validating that important features align with domain expectations
